@@ -27,6 +27,8 @@ Before you can run this app, you need to have the following installed:
 3. Install all dependencies: `npm install` or `yarn` 
 
 #### You can now run the app
+1. Run the App: `yarn android || npm run android`
+2. Release the App: `yarn release || npm run release` 
 
 ###### Also you can download the app APK `https://drive.google.com/file/d/19b8Uf8SE3x6YWvvTruhfHB-1zriDLxEG/view?usp=share_link`
 
