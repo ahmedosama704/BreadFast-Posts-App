@@ -1,6 +1,6 @@
 import React, { FC, useState, useEffect } from 'react';
 import {
-    StyleSheet, View, FlatList, ActivityIndicator, SafeAreaView, Text,
+    StyleSheet, View, FlatList, ActivityIndicator, SafeAreaView, Text, StatusBar,
 } from 'react-native';
 import axios from 'axios';
 import PostCard from '../../components/postCard/PostCard';
@@ -32,8 +32,8 @@ const HomeScreen: FC = () => {
             setOnMomentumScrollBegin(true);
         }
     };
-    // Get Posts
 
+    // Get Posts
     const getPosts = () => {
         setLoading(true);
         axios.get(`${API_URL}posts?page=${pageNumber}&per_page=5`).then((response) => {
@@ -49,27 +49,41 @@ const HomeScreen: FC = () => {
             setLoading(false);
         });
     };
-
+    // Update Posts when page number change
     useEffect(() => {
         getPosts();
     }, [pageNumber]);
+
+    // Page loader
+    const PageLoader = () => (
+        <View style={style.loader}>
+            <ActivityIndicator color="black" />
+            {errorMessage.length > 0 && (
+                <Text>
+                    {errorMessage}
+                </Text>
+            )}
+        </View>
+    );
+
     return (
         <SafeAreaView style={style.container}>
+            <StatusBar
+                animated
+                backgroundColor="#fff"
+                showHideTransition="fade"
+                barStyle="dark-content"
+            />
             {loading && !!data && data.length === 0 ? (
-                <View style={style.loader}>
-                    <ActivityIndicator color="black" />
-                    {errorMessage.length > 0 && (
-                        <Text>
-                            {errorMessage}
-                        </Text>
-                    )}
-                </View>
+                <PageLoader />
             ) : (
                 <FlatList
                     data={data}
-                    renderItem={({ item }) => (
-                        <PostCard data={item} />
-                    )}
+                    renderItem={
+                        ({ item }) => (
+                            <PostCard data={item} />
+                        )
+                    }
                     keyExtractor={(item: any) => item.id}
                     showsVerticalScrollIndicator={false}
                     contentContainerStyle={style.flatListStyle}
