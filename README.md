@@ -1,9 +1,8 @@
 # BreadFast-Posts-App
 This is a React Native App that show users posts. It includes features such as viewing posts and viewing users comments on posts.
 
-### App screenshots 
-![Home Screen](/repoScreenshots/home_screen.png?raw=true "Home Screen" | width=100))
-<img src="/repoScreenshots/home_screen.png" width="50%" height="50%">
+### App screenshots  
+<img src="/repoScreenshots/home_screen.png" style={max-width:100px; float:left}>
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
