@@ -2,7 +2,7 @@
 This is a React Native App that show users posts. It includes features such as viewing posts and viewing users comments on posts.
 
 ### App screenshots 
-![Home Screen](/repoScreenshots/home_screen.png?raw=true "Home")
+![Home Screen](/repoScreenshots/home_screen.png?raw=true width="100" "Home")
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
