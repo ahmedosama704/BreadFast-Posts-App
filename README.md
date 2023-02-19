@@ -7,6 +7,7 @@ This is a React Native App that show users posts. It includes features such as v
 <img src="/repoScreenshots/home_screen.png"  height="400" />
 <img src="/repoScreenshots/postDetails_screen.png"  height="400" />
  </div>
+ 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
