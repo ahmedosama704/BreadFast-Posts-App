@@ -26,8 +26,8 @@ Before you can run this app, you need to have the following installed:
 2. Navigate into the cloned repository: `cd BreadFast-Posts-App` 
 3. Install all dependencies: `npm install` or `yarn` 
 
-### You can now run the app
+## You can now run the app
 
-### Also you can download the app APK https://drive.google.com/file/d/19b8Uf8SE3x6YWvvTruhfHB-1zriDLxEG/view?usp=share_link
+# Also you can download the app APK https://drive.google.com/file/d/19b8Uf8SE3x6YWvvTruhfHB-1zriDLxEG/view?usp=share_link
 
 ### Have func :)) 
